@@ -182,14 +182,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/WS_CareSync-repo/CareSync_AzureDataBricks-repo/Landing_to_Bronze",
+					"notebookPath": "/WS_CareSync-repo/CareSync_AzureDataBricks-repo/Bronze to Silver",
 					"baseParameters": {
-						"source_system": {
-							"value": "@activity('Read AllCol of table_id').output.firstRow.source_system",
-							"type": "Expression"
-						},
 						"table_name": {
-							"value": "@activity('Read AllCol of table_id').output.firstRow.bronze_table_name",
+							"value": "@activity('Read AllCol of table_id').output.firstRow.silver_table_name",
 							"type": "Expression"
 						},
 						"landing_timestamp": {
