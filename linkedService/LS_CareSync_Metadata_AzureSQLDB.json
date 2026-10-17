@@ -1,0 +1,23 @@
+{
+	"name": "LS_CareSync_Metadata_AzureSQLDB",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sqlservercaresync.database.windows.net",
+			"database": "sqldb-caresync",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "gopir02",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_KeyVault_CareSync",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "KV-metadata-sqldb"
+			}
+		}
+	}
+}
