@@ -200,7 +200,7 @@
 				}
 			},
 			{
-				"name": "Update Field status",
+				"name": "Update Field status Success",
 				"type": "Script",
 				"dependsOn": [
 					{
@@ -242,8 +242,7 @@
 				"defaultValue": "1"
 			},
 			"p_pl_adf_run_id": {
-				"type": "string",
-				"defaultValue": "a2"
+				"type": "string"
 			}
 		},
 		"variables": {

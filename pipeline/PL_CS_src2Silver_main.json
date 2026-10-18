@@ -48,6 +48,7 @@
 						"value": "@activity('Read Src tbl list from azure sql db').output.value",
 						"type": "Expression"
 					},
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Ingest from source to silver",
@@ -73,6 +74,10 @@
 								"parameters": {
 									"p_PL_s2sil_in_table_id": {
 										"value": "@item().table_id",
+										"type": "Expression"
+									},
+									"p_pl_adf_run_id": {
+										"value": "@pipeline().parameters.adf_run_id",
 										"type": "Expression"
 									}
 								}
@@ -154,7 +159,7 @@
 			},
 			"adf_run_id": {
 				"type": "string",
-				"defaultValue": "a2"
+				"defaultValue": "a369"
 			}
 		},
 		"variables": {
